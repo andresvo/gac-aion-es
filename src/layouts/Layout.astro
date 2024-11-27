@@ -1,0 +1,95 @@
+---
+import GtmBody from "../components/GtmBody.astro";
+import GtmHead from "../components/GtmHead.astro";
+import MenuMovil from "../components/MenuMovil.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <GtmHead />
+  </head>
+  <body class="text-sm xl:text-base">
+    <GtmBody />
+    <header
+      class="bg-[url('/img/fondo-header-m.jpg')] xl:bg-[url('/img/fondo-header.jpg')] bg-cover aspect-[750/375] xl:aspect-[1440/714] text-white"
+    >
+      <div
+        class="flex justify-between gap-16 items-center pt-2 px-2 xl:pt-4 xl:px-4 max-w-screen-xl mx-auto uppercase poppins-medium"
+      >
+        <a href="https://www.gacmotor.cl"><img
+          src="/img/logo-gac.svg"
+          alt="GAC Motor"
+          class="w-36 xl:w-[295px]"
+        /></a>
+        <nav class="grow hidden xl:block">
+          <ul class="flex justify-between text-sm text-center">
+            <li><a href="#general">Información <br /> general</a></li>
+            <li>
+              <a href="#equipamiento">Equipamiento <br /> y tecnología</a>
+            </li>
+            <li><a href="#seguridad">Seguridad</a></li>
+            <li>
+              <a href="#especificaciones">Especificaciones <br /> técnicas</a>
+            </li>
+            <li><a href="#precios">Precios y<br />financiamiento</a></li>
+          </ul>
+        </nav>
+        <a
+          href="https://gacmotor.cl/cotizador/formulario/?id=5587"
+          class="hidden xl:block border rounded-full px-8 py-2">Cotizar</a
+        >
+        <MenuMovil />
+      </div>
+    </header>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  .poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  .poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  .poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+</style>
