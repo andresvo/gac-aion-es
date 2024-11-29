@@ -1,62 +1,70 @@
-<img
-  src="/img/menu.svg"
-  alt="Menú"
-  id="menu-open"
-  class="w-9 p-1 xl:hidden"
-/>
-<div
-  id="dropdown"
-  class="hidden absolute top-0 left-0 w-full p-2 bg-black text-white"
->
-  <div class="flex justify-between pb-2">
-    <img src="/img/logo-gac.svg" alt="GAC Motor" class="w-36" />
-    <img
-      src="/img/cerrar.svg"
-      alt="cerrar"
-      id="menu-close"
-      class="w-6"
-    />
-  </div>
-  <nav class="border-t border-b uppercase poppins-medium py-2">
-    <ul class="[&>li]:py-2">
-      <li><a href="#general">Información general</a></li>
-      <li>
-        <a href="#equipamiento">Equipamiento y tecnología</a>
-      </li>
-      <li><a href="#seguridad">Seguridad</a></li>
-      <li>
-        <a href="#especificaciones">Especificaciones técnicas</a>
-      </li>
-      <li><a href="#precios">Precios y financiamiento</a></li>
-    </ul>
-  </nav>
-  <div class="flex justify-center gap-4 pt-8 pb-6">
-    <a href="https://www.facebook.com/GAC-Motor-Chile-117678656600095/" class=""
-      ><img src="/img/fb.svg" alt="Facebook" class="w-6" /></a
-    >
-    <a href="https://www.instagram.com/gacmotor_cl/" class=""
-      ><img src="/img/insta.svg" alt="Instgram" class="w-6" /></a
-    >
+<div class="px-4">
+  <div class="section-menu xl:hidden poppins-regular">
+    <div class="section-menu-wrapper">
+      <button class="section-menu-toggle">Seleccionar sección</button>
+    </div>
+    <div class="section-menu-overlay">
+      <a href="#general" class="section-menu-toggle">Información general</a>
+      <a href="#equipamiento" class="section-menu-toggle"
+        >Equipamiento y Tecnología</a
+      >
+      <a href="#especificaciones" class="section-menu-toggle"
+        >Especificaciones Técnicas</a
+      >
+      <a href="#seguridad" class="section-menu-toggle">Seguridad</a>
+      <a href="#precios" class="section-menu-toggle">Precios y Financiamiento</a
+      >
+    </div>
   </div>
 </div>
 
+<style>
+  .section-menu {
+    position: relative;
+    margin: 20px auto;
+  }
+  .section-menu .section-menu-wrapper {
+    position: relative;
+  }
+  .section-menu .section-menu-toggle {
+    border: 2px solid #b81e24;
+    color: #b81e24;
+    text-align: left;
+    background: #fff;
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  .section-menu .section-menu-wrapper:after {
+    font-family: Material Icons;
+    content: "arrow_drop_down";
+    color: #b81e24;
+    font-size: 30px;
+    pointer-events: none;
+    position: absolute;
+    right: 10px;
+    top: 58%;
+    transform: translateY(-58%);
+  }
+  .section-menu .section-menu-overlay {
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: none;
+    flex-direction: column;
+  }
+</style>
+
 <script is:inline>
-  const menuOpen = document.getElementById("menu-open");
-  const menuClose = document.getElementById("menu-close");
-  const dropdown = document.getElementById("dropdown");
+  // mostrar/ocultar overlay
+  const sectionMenu = document.querySelector(".section-menu");
+  const sectionMenuToggle = document.querySelector(".section-menu-toggle");
+  const sectionMenuOverlay = document.querySelector(".section-menu-overlay");
 
-  menuOpen.addEventListener("click", () => {
-    dropdown.classList.remove("hidden");
-  });
-
-  menuClose.addEventListener("click", () => {
-    dropdown.classList.add("hidden");
-  });
-
-  // Ocultar menú al hacer clic en un enlace
-  dropdown.querySelectorAll("a").forEach((anchor) => {
-    anchor.addEventListener("click", () => {
-      dropdown.classList.add("hidden");
-    });
+  sectionMenuToggle.addEventListener("click", () => {
+    sectionMenuOverlay.style.display =
+      sectionMenuOverlay.style.display === "flex" ? "none" : "flex";
   });
 </script>

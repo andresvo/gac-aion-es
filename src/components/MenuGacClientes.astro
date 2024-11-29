@@ -1,0 +1,123 @@
+<div data-v-4240c5b8="" class="overlay overlay--clients">
+  <div data-v-4240c5b8="" class="overlay-links poppins-medium">
+    <a
+      data-v-4240c5b8=""
+      href="https://gacmotor.cl/postventa/agenda-tu-mantencion-2/"
+      class="button-text color-01">AGENDA TU MANTENCIÓN</a
+    ><a
+      data-v-4240c5b8=""
+      href="https://gacmotor.cl/postventa/post-venta-campana-revision/"
+      class="button-text color-01">Revisión campaña preventiva</a
+    ><a
+      data-v-4240c5b8=""
+      href="https://gacmotor.cl/postventa/pautas-de-mantencion/"
+      class="button-text color-01">Pautas de Mantención y Accesorios</a
+    ><a
+      data-v-4240c5b8=""
+      href="https://gacmotor.cl/postventa/hdi-seguros/"
+      class="button-text color-01">HDI Seguros</a
+    ><a
+      data-v-4240c5b8=""
+      href="https://gacmotor.cl/postventa/garantia-y-manuales/"
+      class="button-text color-01">Garantía y Manuales</a
+    ><a
+      data-v-4240c5b8=""
+      href="https://gacmotor.cl/postventa/mantenciones-prepagadas/"
+      class="button-text color-01">Mantenciones prepagadas</a
+    >
+  </div>
+  <div data-v-4240c5b8="" class="overlay-two-column">
+    <div data-v-4240c5b8="" class="overlay-two-column__image">
+      <img
+        data-v-4240c5b8=""
+        src="https://gacmotor.cl/content/uploads/two-column-overlay.png"
+      />
+    </div>
+    <div
+      data-v-4240c5b8=""
+      class="overlay-two-column__content d-flex flex-column align-items-start"
+    >
+      <h5 data-v-4240c5b8="" class="title--small color-03 poppins-medium">
+        CLIENTES
+      </h5>
+      <p data-v-4240c5b8="" class="paragraph color-05 pt-2 poppins-regular">
+        Te acompañamos en cada kilómetro para que disfrutes al máximo tu GAC
+        Motor. Encuentra las pautas de mantención, garantías, manuales, seguro y
+        accesorios para tu vehículo aquí.
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .overlay .overlay-links {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 10;
+    border-right: 2px solid hsla(0, 0%, 50.2%, 0.1);
+  }
+  .overlay .overlay-two-column {
+    display: flex;
+    width: 75%;
+  }
+  .overlay .overlay-two-column__image {
+    width: 35%;
+    margin: 0 30px;
+  }
+  .overlay .overlay-two-column__image img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+  .overlay .overlay-two-column__content {
+    width: 65%;
+    padding: 20px 0;
+  }
+  .overlay .overlay-links a {
+    color: #b81e24;
+    padding: 10px 0;
+  }
+  .title--small {
+    font-weight: 600;
+    font-size: 18px;
+  }
+  .paragraph {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .color-03 {
+    color: #333;
+  }
+  .color-05 {
+    color: grey;
+  }
+</style>
+
+<script is:inline>
+  // mostrar/ocultar overlay
+  const overlayClientes = document.querySelector(".overlay--clients");
+  document.querySelector(".post-venta").addEventListener("click", () => {
+    if (overlayClientes.style.opacity == 1) {
+      overlayClientes.style.opacity = 0;
+      overlayClientes.style.visibility = "hidden";
+    } else {
+      overlayClientes.style.opacity = 1;
+      overlayClientes.style.visibility = "visible";
+    }
+  });
+
+  // ocultar overlay click afuera
+  document.addEventListener("click", function (event) {
+    if (
+      !event.target.closest(".overlay--clients") &&
+      !event.target.closest(".post-venta")
+    ) {
+      overlayClientes.style.opacity = 0;
+      overlayClientes.style.visibility = "hidden";
+    }
+  });
+</script>

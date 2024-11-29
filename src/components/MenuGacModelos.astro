@@ -1,0 +1,193 @@
+<div data-v-378b9ce7="" class="overlay overlay--models">
+  <div data-v-378b9ce7="" class="overlay-models">
+    <div data-v-378b9ce7="" class="overlay-models__image col-25">
+      <a data-v-378b9ce7="" href="https://gacmotor.cl/modelos/gs3-power/"
+        ><img
+          data-v-378b9ce7=""
+          src="https://gacmotor.cl/content/uploads/min-gs3-power-540x440-1.png"
+          alt="GS3 Power"
+          class="img-fluid"
+        /></a
+      >
+    </div><div data-v-378b9ce7="" class="overlay-models__image col-25">
+      <a data-v-378b9ce7="" href="https://gacmotor.cl/modelos/new-gs4-power/"
+        ><img
+          data-v-378b9ce7=""
+          src="https://gacmotor.cl/content/uploads/min-gs4-power-540x440-1.png"
+          alt="GS4 POWER"
+          class="img-fluid"
+        /></a
+      >
+    </div><div data-v-378b9ce7="" class="overlay-models__image col-25">
+      <a data-v-378b9ce7="" href="https://gacmotor.cl/modelos/all-new-gs8/"
+        ><img
+          data-v-378b9ce7=""
+          src="https://gacmotor.cl/content/uploads/540x440-miniatura-2.png"
+          alt="NEW GS8"
+          class="img-fluid"
+        /></a
+      >
+    </div><div data-v-378b9ce7="" class="overlay-models__image col-25">
+      <a data-v-378b9ce7="" href="https://gacmotor.cl/modelos/emkoo/"
+        ><img
+          data-v-378b9ce7=""
+          src="https://gacmotor.cl/content/uploads/imagen-miniatura-540x440-1.png"
+          alt="EMKOO"
+          class="img-fluid"
+        /></a
+      >
+    </div><div data-v-378b9ce7="" class="overlay-models__image col-25">
+      <a data-v-378b9ce7="" href="https://gacmotor.cl/modelos/emzoom/"
+        ><img
+          data-v-378b9ce7=""
+          src="https://gacmotor.cl/content/uploads/imagen-miniatura-540x440-5.png"
+          alt="EMZOOM"
+          class="img-fluid"
+        /></a
+      >
+    </div><div data-v-378b9ce7="" class="overlay-models__image col-25">
+      <a data-v-378b9ce7="" href="https://gacmotor.cl/modelos/aion-y/"
+        ><img
+          data-v-378b9ce7=""
+          src="https://gacmotor.cl/content/uploads/imagen-miniatura-540x440-5-aion.png"
+          alt="Aion Y"
+          class="img-fluid"
+        /></a
+      >
+    </div><div data-v-378b9ce7="" class="overlay-models__image col-25">
+      <a data-v-378b9ce7="" href="https://gacmotor.cl/modelos/empow/"
+        ><img
+          data-v-378b9ce7=""
+          src="https://gacmotor.cl/content/uploads/imagen-miniatura-540x440-5-empow-1.png"
+          alt="EMPOW"
+          class="img-fluid"
+        /></a
+      >
+    </div>
+  </div>
+  <div data-v-378b9ce7="" class="overlay-models__see-more">
+    <a
+      data-v-378b9ce7=""
+      href="https://gacmotor.cl/modelos/"
+      class="button-bg--arrow"
+      ><span data-v-378b9ce7="" class="button-text"
+        >Ver más <i data-v-378b9ce7="" class="material-icons"
+          >keyboard_arrow_right</i
+        ></span
+      ></a
+    >
+  </div>
+</div>
+
+<style is:global>
+  .overlay--models {
+    flex-direction: column;
+  }
+  .overlay {
+    padding: 20px 40px;
+    display: flex;
+    position: fixed;
+    width: 75%;
+    background: #e0e0e0;
+    top: 7rem;
+    left: 14%;
+    transition:
+      opacity 0.4s ease,
+      visibility 0.4s ease;
+    opacity: 0;
+    -webkit-animation: fadeIn 0.4s ease;
+    animation: fadeIn 0.4s ease;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    z-index: 10;
+    visibility: hidden;
+  }
+  .overlay .overlay-models__image img {
+    transition: all 0.2s ease;
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    margin-top: -4rem;
+  }
+  .overlay .overlay-models {
+    display: flex;
+    padding: 2rem;
+  }
+  .overlay .overlay-models__image {
+    text-align: center;
+  }
+  .overlay .overlay-models__see-more {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+  }
+  .button-bg--arrow {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: #b81e24;
+    display: inline-block;
+    transition: all 0.2s ease;
+  }
+  .overlay .overlay-models__see-more span {
+    display: flex;
+    align-items: center;
+  }
+  .button-bg--arrow span {
+    margin-right: 0.5rem;
+  }
+  .button-text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1rem;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+    border-bottom: 0.1rem solid transparent;
+  }
+  .col-25 {
+    flex: 0 0 14.5%;
+    max-width: 20%;
+  }
+  .material-icons {
+    font-family: "Material Icons";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: "liga";
+    -webkit-font-smoothing: antialiased;
+  }
+</style>
+
+<script is:inline>
+  // mostrar/ocultar overlay
+  const overlay = document.querySelector(".overlay--models");
+  document.querySelector(".modelos").addEventListener("click", () => {
+    if (overlay.style.opacity == 1) {
+      overlay.style.opacity = 0;
+      overlay.style.visibility = "hidden";
+    } else {
+      overlay.style.opacity = 1;
+      overlay.style.visibility = "visible";
+    }
+  });
+
+  // ocultar overlay click afuera
+  document.addEventListener("click", function (event) {
+    if (
+      !event.target.closest(".overlay--models") &&
+      !event.target.closest(".modelos")
+    ) {
+      overlay.style.opacity = 0;
+      overlay.style.visibility = "hidden";
+    }
+  });
+</script>

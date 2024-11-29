@@ -1,0 +1,111 @@
+---
+import MenuGacClientes from "./MenuGacClientes.astro";
+import MenuGacModelos from "./MenuGacModelos.astro";
+---
+
+<div
+  class="hidden xl:flex mx-12 border-b-semi justify-between items-center text-[12px]"
+>
+  <a href="https://gacmotor.cl/"
+    ><img
+      src=`${import.meta.env.BASE_URL == '/'? '' : import.meta.env.BASE_URL}/img/logo-gac.svg`
+      alt="GAC Motor"
+      class="w-36 xl:w-[295px]"
+    /></a
+  >
+  <nav>
+    <div class="border-b-semi flex">
+      <ul id="menu-menu-header" class="menu-header flex gap-9 poppins-regular">
+        <li id="menu-item-3624" class="menu-item bg-rojo">
+          <a
+            href="https://store.gacmotor.cl/?_gl=1*kreby9*_gcl_au*OTQ0NTAxOTc1LjE3Mjg0MjQ5NzAuMTUwNTg1NTY0Mi4xNzMyNTQwMzIxLjE3MzI1NDA0NDA."
+            >GAC STORE</a
+          >
+        </li><li id="menu-item-692" class="menu-item opacity-70">
+          <a href="https://gacmotor.cl/conoce-gac-motor/">Conoce GAC Motor</a>
+        </li><li id="menu-item-797" class="menu-item opacity-70">
+          <a href="https://gacmotor.cl/novedades/">Noticias GAC</a>
+        </li><li id="menu-item-694" class="menu-item opacity-70">
+          <a href="https://gacmotor.cl/centro-de-ayuda/">Centro de ayuda</a>
+        </li>
+      </ul>
+      <div class="header__top-icons ml-9 flex gap-9 items-center">
+        <a
+          target="_blank"
+          href="https://www.facebook.com/GAC-Motor-Chile-117678656600095/"
+          aria-label="rrss facebook"><i class="icon fab fa-facebook-f"></i></a
+        >
+        <a
+          target="_blank"
+          href="https://www.instagram.com/gacmotor_cl/"
+          aria-label="rrss instagram"><i class="icon fab fa-instagram"></i></a
+        >
+        <a
+          target="_blank"
+          href="https://www.youtube.com/channel/UCmkG3qQgebZIdcMHBTBsUNg"
+          aria-label="rrss youtube"><i class="icon fab fa-youtube"></i></a
+        >
+      </div>
+    </div>
+    <div>
+      <ul
+        id="menu-menu-principal"
+        class="menu-principal flex gap-10 justify-end poppins-semibold uppercase"
+      >
+        <li
+          id="menu-item-706"
+          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-6 current_page_item menu-item-706"
+        >
+          <a href="https://gacmotor.cl/" aria-current="page">Inicio</a>
+        </li><li id="menu-item-713" class="modelos menu-item">
+          <a href="#">Modelos</a>
+        </li><li id="menu-item-714" class="post-venta menu-item">
+          <a href="#">Clientes</a>
+        </li><li id="menu-item-740" class="menu-item">
+          <a href="https://gacmotor.cl/centro-de-ayuda/sucursales/"
+            >Concesionarios</a
+          >
+        </li><li id="menu-item-741" class="menu-item bg-rojo">
+          <a href="https://gacmotor.cl/cotizador/" class="inline-block px-20"
+            >Cotiza</a
+          >
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<MenuGacModelos />
+<MenuGacClientes />
+
+<style>
+  .border-b-semi {
+    border-bottom: 0.5px solid hsla(0, 0%, 100%, 0.19607843137254902);
+  }
+  .fab {
+    font-family: "Font Awesome 5 Brands";
+  }
+  .menu-item a {
+    height: 46px;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .bg-rojo {
+    background-color: rgb(184, 30, 36);
+  }
+  .menu-principal .menu-item a {
+    height: 66px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .menu-principal .menu-item.bg-rojo a {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .header__top-icons a {
+    color: #fff;
+    font-size: 18px;
+  }
+</style>

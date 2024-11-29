@@ -1,6 +1,8 @@
 ---
 import GtmBody from "../components/GtmBody.astro";
 import GtmHead from "../components/GtmHead.astro";
+import MenuGac from "../components/MenuGac.astro";
+import MenuGacMovil from "../components/MenuGacMovil.astro";
 import MenuMovil from "../components/MenuMovil.astro";
 
 interface Props {
@@ -20,12 +22,23 @@ const { title } = Astro.props;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      id="font-awesome-css"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css?ver=5.8.1"
+      type="text/css"
+      media="all"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
     />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
@@ -34,18 +47,23 @@ const { title } = Astro.props;
   <body class="text-sm xl:text-base">
     <GtmBody />
     <header
-      class="bg-[url('/img/fondo-header-m.jpg')] xl:bg-[url('/img/fondo-header.jpg')] bg-cover aspect-[750/375] xl:aspect-[1440/714] text-white"
+      class="bg-[url('/img/fondo-header2-m.jpg')] xl:bg-[url('/img/fondo-header2.jpg')] bg-cover aspect-[750/375] xl:aspect-[1440/714] text-white"
     >
+      <MenuGac />
       <div
-        class="flex justify-between gap-16 items-center pt-2 px-2 xl:pt-4 xl:px-4 max-w-screen-xl mx-auto uppercase poppins-medium"
+        class="flex justify-between xl:justify-center pt-2 px-2 xl:pt-4 xl:px-4 poppins-medium"
       >
-        <a href="https://www.gacmotor.cl"><img
-          src="/img/logo-gac.svg"
-          alt="GAC Motor"
-          class="w-36 xl:w-[295px]"
-        /></a>
-        <nav class="grow hidden xl:block">
-          <ul class="flex justify-between text-sm text-center">
+        <a href="https://www.gacmotor.cl"
+          ><img
+            src="/img/logo-gac.svg"
+            alt="GAC Motor"
+            class="xl:hidden w-36"
+          /></a
+        >
+        <nav class="hidden xl:block">
+          <ul
+            class="flex gap-16 items-center justify-between text-sm text-center uppercase"
+          >
             <li><a href="#general">Información <br /> general</a></li>
             <li>
               <a href="#equipamiento">Equipamiento <br /> y tecnología</a>
@@ -57,13 +75,10 @@ const { title } = Astro.props;
             <li><a href="#precios">Precios y<br />financiamiento</a></li>
           </ul>
         </nav>
-        <a
-          href="https://gacmotor.cl/cotizador/formulario/?id=5587"
-          class="hidden xl:block border rounded-full px-8 py-2">Cotizar</a
-        >
-        <MenuMovil />
+        <MenuGacMovil />
       </div>
     </header>
+    <MenuMovil />
     <slot />
   </body>
 </html>
@@ -78,6 +93,12 @@ const { title } = Astro.props;
   .poppins-medium {
     font-family: "Poppins", sans-serif;
     font-weight: 500;
+    font-style: normal;
+  }
+
+  .poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
     font-style: normal;
   }
 
